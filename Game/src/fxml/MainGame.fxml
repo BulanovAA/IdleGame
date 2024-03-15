@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.42" snapToPixel="false" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="718.0" prefWidth="540.0">
+        <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="540.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="40.0" tabMaxWidth="118.0" tabMinHeight="40.0" tabMinWidth="118.0">
+            <Tab closable="false" text="Level">
+                <SplitPane dividerPositions="0.5111441307578009" orientation="VERTICAL">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                        <GridPane prefHeight="341.0" prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="74.0" minWidth="66.0" prefWidth="66.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="194.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <Label fx:id="levelCurrent" text="Level" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                <font>
+                                    <Font size="18.0" />
+                                </font>
+                            </Label>
+                            <Label text="Strength" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label text="Vitality" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label text="Agility" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label text="Intelligent" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label text="Luck" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="upgradeStrengthLevel" text="0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label fx:id="upgradeVitalityLevel" text="0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label fx:id="upgradeAgilityLevel" text="0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label fx:id="upgradeIntelligentLevel" text="0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                                <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label fx:id="upgradeLuckLevel" text="0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                                <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Button fx:id="upgradeStrength" mnemonicParsing="false" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                            <Button fx:id="upgradeVitality" mnemonicParsing="false" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                            <Button fx:id="upgradeAgility" mnemonicParsing="false" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                            <Button fx:id="upgradeIntelligent" mnemonicParsing="false" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                            <Button fx:id="upgradeLuck" mnemonicParsing="false" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                            <Label text="Cost:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label text="Cost:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label text="Cost:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label text="Cost:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label text="Cost:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label fx:id="upgradeStrengthCost" text="1" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label fx:id="upgradeVitalityCost" text="1" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label fx:id="upgradeAgilityCost" text="1" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label fx:id="upgradeIntelligentCost" text="1" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label fx:id="upgradeLuckCost" text="5" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                     <Label fx:id="statPointsCurrent" text="0" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                        <GridPane.margin>
+                           <Insets left="5.0" right="5.0" />
+                        </GridPane.margin>
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="StatPoints" GridPane.columnIndex="5">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                        <GridPane.margin>
+                           <Insets left="5.0" right="5.0" />
+                        </GridPane.margin>
+                     </Label>
+                        </GridPane>
+                    </AnchorPane>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                        <GridPane layoutY="-3.0" prefHeight="332.0" prefWidth="534.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <Label text="Enemy Level:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Spinner fx:id="spawnTimeSpinner" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <valueFactory>
+                                    <SpinnerValueFactory.IntegerSpinnerValueFactory max="100" min="1" />
+                                </valueFactory>
+                            </Spinner>
+                            <Label text="Spawn" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                <font>
+                                    <Font size="18.0" />
+                                </font>
+                            </Label>
+                            <Label text="Seconds:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Spinner fx:id="enemyLevelSpinner" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <valueFactory>
+                                    <SpinnerValueFactory.IntegerSpinnerValueFactory max="100" min="1" />
+                                </valueFactory>
+                            </Spinner>
+                            <Label text="Count:" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Spinner fx:id="spawnCountSpinner" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                <valueFactory>
+                                    <SpinnerValueFactory.IntegerSpinnerValueFactory max="100" min="0" />
+                                </valueFactory>
+                            </Spinner>
+                            <Label text="Enemy killed:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                </GridPane.margin>
+                            </Label>
+                            <Label fx:id="enemyKilledLabel" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                        </GridPane>
+                    </AnchorPane>
+                </SplitPane>
+            </Tab>
+            <Tab closable="false" text="Upgrades">
+                <GridPane gridLinesVisible="true">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <Button fx:id="upgradeAP" mnemonicParsing="false" prefHeight="115.0" prefWidth="270.0" />
+                    <GridPane mouseTransparent="true">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Attack Power Upgrade" wrapText="true">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeAPLevel" text="0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Current Attack Power" wrapText="true" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeAPCurrent" text="10" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Cost:" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeAPCost" text="10" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                    <Button fx:id="upgradeAS" mnemonicParsing="false" prefHeight="115.0" prefWidth="270.0" GridPane.columnIndex="1" />
+                    <GridPane mouseTransparent="true" GridPane.columnIndex="1">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Attack Speed Upgrade" wrapText="true">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeASLevel" text="0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Current Attack Speed" wrapText="true" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeASCurrent" text="100%" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Cost:" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeASCost" text="100" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                    <Button fx:id="upgradeCC" mnemonicParsing="false" prefHeight="115.0" prefWidth="270.0" GridPane.rowIndex="1" />
+                    <GridPane mouseTransparent="true" GridPane.rowIndex="1">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Crit Chance Upgrade" wrapText="true">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeCCLevel" text="0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Current Crit Chance" wrapText="true" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeCCCurrent" text="0.0%" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Cost:" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeCCCost" text="50" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                    <Button fx:id="upgradeCP" mnemonicParsing="false" prefHeight="115.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <GridPane mouseTransparent="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Crit Power Upgrade" wrapText="true">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeCPLevel" text="0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Current Crit Power" wrapText="true" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeCPCurrent" text="110%" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Cost:" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeCPCost" text="10" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                    <Button fx:id="upgradeS" mnemonicParsing="false" prefHeight="115.0" prefWidth="270.0" GridPane.rowIndex="2" />
+                    <GridPane mouseTransparent="true" GridPane.rowIndex="2">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Speed Upgrade" wrapText="true">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeSLevel" text="0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Current Speed" wrapText="true" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeSCurrent" text="100%" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Cost:" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeSCost" text="20" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                    <Button fx:id="upgradeA" mnemonicParsing="false" prefHeight="115.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <GridPane mouseTransparent="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Armor Upgrade" wrapText="true">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeALevel" text="0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Current Armor" wrapText="true" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeACurrent" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Cost:" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeACost" text="20" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                    <Button fx:id="upgradeH" mnemonicParsing="false" prefHeight="115.0" prefWidth="270.0" GridPane.rowIndex="3" />
+                    <GridPane mouseTransparent="true" GridPane.rowIndex="3">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Health Upgrade" wrapText="true">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeHLevel" text="0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Current Health" wrapText="true" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeHCurrent" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Cost:" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeHCost" text="10" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                    <Button fx:id="upgradeHR" mnemonicParsing="false" prefHeight="115.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <GridPane mouseTransparent="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Health Regeneration Upgrade" wrapText="true">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeHRLevel" text="0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Current Health Regeneration" wrapText="true" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeHRCurrent" text="0.0%" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Cost:" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeHRCost" text="50" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                    <Button fx:id="upgradeBC" mnemonicParsing="false" prefHeight="115.0" prefWidth="270.0" GridPane.rowIndex="4" />
+                    <GridPane mouseTransparent="true" GridPane.rowIndex="4">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Block Chance Upgrade" wrapText="true">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeBCLevel" text="0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Current Block Chance" wrapText="true" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeBCCurrent" text="0.0%" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Cost:" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeBCCost" text="50" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                    <Button fx:id="upgradeDC" mnemonicParsing="false" prefHeight="115.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    <GridPane mouseTransparent="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Dodge Chance Upgrade" wrapText="true">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeDCLevel" text="0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Current Dodge Chance" wrapText="true" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeDCCurrent" text="0.0%" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Cost:" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeDCCost" text="50" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                    <Button fx:id="upgradeSS" mnemonicParsing="false" prefHeight="115.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                    <GridPane mouseTransparent="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Skill Speed Upgrade" wrapText="true">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeSSLevel" text="0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Current Skill Speed" wrapText="true" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeSSCurrent" text="100%" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Cost:" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeSSCost" text="100" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                    <Button fx:id="upgradeSP" mnemonicParsing="false" prefHeight="115.0" prefWidth="270.0" GridPane.rowIndex="5" />
+                    <GridPane mouseTransparent="true" GridPane.rowIndex="5">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Skill Power Upgrade" wrapText="true">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeSPLevel" text="0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Current Skill Power" wrapText="true" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeSPCurrent" text="10" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Cost:" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="upgradeSPCost" text="10" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                </GridPane>
+            </Tab>
+            <Tab text="Stats">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <GridPane prefHeight="673.0" prefWidth="534.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="0.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="120.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Stats" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Attack Power" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Crit Chance" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Speed" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Health" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Block Chance" GridPane.rowIndex="5">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Skill Power" GridPane.rowIndex="6">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Block Power" GridPane.rowIndex="7">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Bonus Experience" GridPane.rowIndex="8">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Attack Speed" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Crit Power" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Armor" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Health Regeneration" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Dodge Chance" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Skill Speed" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Bonus Gold" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="APCurrent" text="10" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="CCCurrent" text="0.0%" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="SCurrent" text="100%" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="HCurrent" text="100" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="BCCurrent" text="0.0%" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="SPCurrent" text="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="BPCurrent" text="1" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="BECurrent" text="0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="ASCurrent" text="100%" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="CPCurrent" text="110%" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="ACurrent" text="0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="HRCurrent" text="0.0%" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="DCCurrent" text="0.0%" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="SSCurrent" text="100%" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="BGCurrent" text="0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                    </GridPane>
+                </AnchorPane>
+            </Tab>
+            <Tab text="Settings">
+                <AnchorPane>
+                    <GridPane prefHeight="672.0" prefWidth="540.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Settings" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="saveButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Save" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                        </Button>
+                        <Button fx:id="loadButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Load" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                        </Button>
+                  <Button fx:id="exitButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="169.0" text="Exit" GridPane.columnIndex="2" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cheatsButton" mnemonicParsing="false" prefHeight="359.0" prefWidth="169.0" text="Cheats" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Slider fx:id="gameSpeedSlider" blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" top="20.0" />
+                     </GridPane.margin>
+                  </Slider>
+                  <Label text="Game speed" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="20.0" top="75.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                    </GridPane>
+                </AnchorPane>
+            </Tab>
+        </TabPane>
+    </AnchorPane>
+    <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="732.0" style="-fx-background-color: grey;">
+        <Group fx:id="battleFieldGroup" mouseTransparent="true" />
+        <ProgressBar fx:id="healthBar" layoutX="364.0" layoutY="350.0" maxHeight="-Infinity" minHeight="-Infinity" mouseTransparent="true" prefWidth="720.0" progress="0.0" rotate="-90.0" style="-fx-accent: green;" />
+        <ProgressBar fx:id="expBar" layoutX="-351.0" layoutY="350.0" maxHeight="-Infinity" minHeight="-Infinity" mouseTransparent="true" prefWidth="720.0" progress="0.0" rotate="-90.0" style="-fx-accent: yellow;" />
+        <GridPane layoutX="32.0" layoutY="-1.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="34.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="166.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label text="Gold:">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="goldLabel" text="0" GridPane.columnIndex="1">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </GridPane>
+        <GridPane layoutX="456.0" layoutY="-2.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+        </GridPane>
+        <ToolBar layoutX="616.0" layoutY="679.0" prefHeight="40.0" prefWidth="98.0">
+            <Button fx:id="resetButton" mnemonicParsing="false" text="Reset"/>
+            <Button fx:id="exitBarButton" mnemonicParsing="false" text="Exit"/>
+        </ToolBar>
+    </AnchorPane>
+</SplitPane>
